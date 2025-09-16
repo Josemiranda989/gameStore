@@ -1,6 +1,5 @@
 # PENDIENTES
-- Crear vistas: Lista, detalle, creacion, edicion, eliminacion productos.
-- Estilos
+- Create, edit, delete
 - Implementar manejo de imagenes ( MULTER )
 
 # Paso a paso4
