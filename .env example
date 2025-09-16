@@ -1,0 +1,3 @@
+DB_USERNAME = root
+DB_NAME = game_store_db
+DB_PASSWORD = INGRESATUPASSWORD

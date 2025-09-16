@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs', {style:'home'}) %>
+
+  <body>
+    <%- include('./partials/navbar.ejs') %>
+      <main>
+        <h1>Lista de Juegos disponibles</h1>
+        <section class="container">
+          <% products.forEach(p=> { %>
+            <article class="card">
+              <h4>
+                <%= p.name %>
+              </h4>
+              <p>
+                <%= p.description %>
+              </p>
+              <h5>
+                <%= p.genre.name %>
+              </h5>
+            </article>
+            <% }) %>
+        </section>
+      </main>
+      <%- include('./partials/footer.ejs') %>
+  </body>
+
+</html>
