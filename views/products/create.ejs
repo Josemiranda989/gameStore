@@ -3,7 +3,38 @@
 <%- include('../partials/head.ejs', {style:'forms'}) %>
 <body>
   <%- include('../partials/navbar.ejs') %>
-
+<main>
+  <h1>Formulario de Creación</h1>
+  <form class="container" action="/prod/create" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="name">Ingrese el nombre</label>
+      <input type="text" name="name" id="name" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Ingrese una breve descripcion</label>
+      <textarea name="description" id="description"></textarea>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="image">Ingrese una foto de portada</label>
+    <input type="file" name="image" id="image" accept="image/*">
+  </div>
+  <div class="form-group">
+    <label for="genre">Ingrese un genero</label>
+    <select name="genre" id="genre">
+      <option value="" disabled selected>Seleccionar</option>
+      <% genres.forEach(g => { %>
+        <option value="<%= g.id %>"><%= g.name %></option>
+        <% }) %>
+      </select>
+    </div>
+    <div class="form-group">
+      <button type="submit">Crear</button>
+    </div>
+    
+  </form>
+</main>
+  
   <%- include('../partials/footer.ejs') %>
 </body>
 </html>

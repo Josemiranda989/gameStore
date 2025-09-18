@@ -9,15 +9,19 @@
         <section class="container">
           <% products.forEach(p=> { %>
             <article class="card">
+              <a href="/prod/detail/<%= p.id %>">
               <h4>
                 <%= p.name %>
               </h4>
+              </a>
+
               <p>
                 <%= p.description %>
               </p>
               <h5>
                 <%= p.genre.name %>
               </h5>
+              <img src="/images/products/<%= p.image %>" alt="">
             </article>
             <% }) %>
         </section>

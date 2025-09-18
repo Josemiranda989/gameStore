@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    margin: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 500px ;
+}
+
+.card-description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container img {
+    width: 60%;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: violet;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.btn:hover {
+    background-color:rgb(212, 85, 212) ;
+}
+
+.delete {
+    background-color: rgb(104, 104, 104);
+}
+
+.delete:hover{
+    background-color: rgb(171, 5, 5);
+}
+
+.update {
+    background-color: rgb(104, 104, 104);
+}
+
+.update:hover{
+    background-color: rgb(189, 125, 6);
+}
+

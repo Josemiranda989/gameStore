@@ -3,7 +3,41 @@
 <%- include('../partials/head.ejs', {style:'forms'}) %>
 <body>
   <%- include('../partials/navbar.ejs') %>
-
+<main>
+  <h1>Formulario de Edición</h1>
+  <form class="container" action="/prod/update/<%= prod.id %>?_method=PUT" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="name">Ingrese el nombre</label>
+      <input type="text" name="name" id="name" value="<%= prod.name %>" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Ingrese una breve descripcion</label>
+      <textarea name="description" id="description"><%= prod.description %></textarea>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="image">Ingrese una foto de portada</label>
+    <input type="file" name="image" id="image">
+    <img src="/images/products/<%= prod.image %>" alt="imagen-anterior">
+  </div>
+  <div class="form-group">
+    <label for="genre">Ingrese un genero</label>
+    <select name="genre" id="genre">
+      <% genres.forEach(g => { %>
+        <% if (prod.genre_id == g.id) { %>
+         <option value="<%= g.id %>" selected><%= g.name %></option>
+        <% } else { %>          
+        <option value="<%= g.id %>"><%= g.name %></option>
+        <% }}) %>
+      </select>
+    </div>
+    <div class="form-group">
+      <button type="submit">Editar</button>
+    </div>
+    
+  </form>
+</main>
+  
   <%- include('../partials/footer.ejs') %>
 </body>
 </html>

@@ -1,0 +1,35 @@
+main h1 {
+    text-align: center;
+}
+
+.container {
+    margin: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 500px ;
+    align-items: center;
+
+}
+
+.form-group {
+    padding-top:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    background-color: violet;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-group button:hover {
+    background-color:rgb(212, 85, 212) ;
+}
+
+.form-group img {
+    width: 50px;
+}
